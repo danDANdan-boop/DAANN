@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+//include "lib.h"
+#include <time.h>
+//#include <cstring>
+using namespace std;
+
+string c = "";
+
+int main()
+{
+   
+    
+    
+    
+    srand(time(NULL));
+	setlocale(LC_ALL, "Russian");
+
+	while (c != "stop")
+    {   
+        cout << "Можно ввести вопрос только на котрый можно ответить ДА, НЕТ, НЕ ЗНАЮ. Введите вопрос:" << endl;
+        getline(cin,c);
+        
+        for(int i = 0; i < c.length() - 1; i++)
+        {
+            
+            if(c[i]>'A' && c[i]<'Z') c[i]+='z'-'Z';
+            if(c[i]>'А' && c[i]<'Я') c[i]+='я'-'Я';
+        } 
+        cout << c << endl;
+    		
+    	int n = rand() % 15;
+    	if (n < 5)
+    	{
+        cout << " ДА" << endl;
+    	}
+    	else if (n >= 5 & n < 10)
+    	{
+        cout <<  "НЕТ"   << endl;
+    	}
+    	else
+    	{
+        cout <<  "НЕ ЗНАЮ"   << endl;
+    	}
+    	    
+    }
+	
+	
+	
+	return 0;
+}
