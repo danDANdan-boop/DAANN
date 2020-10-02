@@ -33,7 +33,7 @@ int main()
     	    
     }
 	
-	
+	cout << "Hello from GITHUB" << endl;
 //	cout << n << endl;
 	return 0;
 }
